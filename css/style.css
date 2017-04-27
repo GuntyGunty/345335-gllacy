@@ -22,11 +22,18 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2.3% 0 2.3%;
 }
 
 .main-header {
-  width: 100%;
+  padding: 0 2.3% 0 2.3%;
+}
+
+.main-content {
+  padding: 0 2.3% 0 2.3%;
+}
+
+.main-footer {
+  padding: 0 2.3% 0 2.3%;
 }
 
 .main-header-layout {
@@ -212,7 +219,7 @@ body {
   width: 22px;
   height: 24px;
   background: #fff url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -446px -2px;
+  background-position: -603px -2px;
 }
 
 .breadcrumbs-info-item {
@@ -279,7 +286,7 @@ body {
 
 .form-filters {
   width: 880px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .filter-item {
@@ -386,6 +393,7 @@ body {
   min-width: 705px;
   border: none;
   padding: 0px;
+  margin-right: 10px;
 }
 
 .radio-label {
@@ -433,6 +441,10 @@ body {
   padding-right: 50px;
 }
 
+.checkbox-label:nth-child(5) {
+  padding-right: 0;
+}
+
 .checkbox-label input[type="checkbox"] {
   display: none;
 }
@@ -450,6 +462,8 @@ body {
   height: 22px;
   border-radius: 5px;
   border: 2px solid #f8f7f4;
+  /*background: url("../img/sprite/spritesheet.png") no-repeat;
+  background-position: -507px -2px;*/
 }
 
 .rcheckbox-label input[type="checkbox"]:checked+.checkbox-indicator {
@@ -459,23 +473,28 @@ body {
   left: 3px;
   width: 12px;
   height: 12px;
-  border: 2px solid #f8f7f4;
-  background-color: #f8f7f4;
+  background: url("../img/sprite/spritesheet.png") no-repeat;
+  background-position: -483px -2px;
 }
 
 .form-sort-checkbox {
   padding: 10px 25px 10px 45px;
 }
 
+.button-block {
+  padding-top: 20px;
+}
+
 .form-submit {
   display: block;
-  padding: 5px 10px;
+  padding: 10px 30px;
   background: #a6b7ae;
   border: 2px solid #fbfbfb;
   font-size: 16px;
   line-height: 18px;
   color: #fff;
   border-radius: 30px;
+  height: 39px;
 }
 
 .form-select {
@@ -492,13 +511,26 @@ body {
 }
 
 .product {
+  top: -10px;
   position: relative;
-  width: 22%;
+  width: 23.2%;
   height: auto;
   flex-basis: 22%;
   flex-shrink: 0;
   box-sizing: content-box;
-  margin: 0 2% 15px;
+  margin: 0 1.15% 40px;
+}
+
+.product:hover {
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px 1.15% 20px 1.15%;
+  background-color: rgba(248, 247, 244, 0.3);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  margin-bottom: -10px;
+  z-index: 55;
 }
 
 .product:nth-child(4n) {
@@ -510,8 +542,8 @@ body {
 }
 
 .product-title {
-  margin: 0px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .product-link {
@@ -525,8 +557,18 @@ body {
   height: auto;
 }
 
+.products>.product:hover>.product-preview {
+  display: block;
+}
+
 .product-preview {
   display: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.btn {
   color: #fff;
   font-size: 18px;
   line-height: 24px;
@@ -540,7 +582,7 @@ body {
   position: absolute;
   font-size: 45px;
   font-weight: bold;
-  bottom: 22%;
+  bottom: 35%;
   left: 0px;
 }
 
@@ -590,9 +632,8 @@ body {
   vertical-align: sub;
 }
 
-.pagination-item:not(.arrow-direction-btn):not(.pagination-item-active):hover {
-  width: 26px;
-  height: 26px;
+.pagination-link:hover {
+  padding: 5px 10px 5px 10px;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.2;
@@ -648,7 +689,7 @@ body {
   top: 0;
   left: -23px;
   background: url("../img/sprite/spritesheet.png") no-repeat center;
-  background-position: -156px -2px;
+  background-position: -297px -2px;
   width: 15px;
   height: 13px;
 }
@@ -680,7 +721,7 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background: url("../img/sprite/spritesheet.png") no-repeat center;
-  background-position: -175px -2px;
+  background-position: -2px -2px;
   width: 32px;
   height: 32px;
 }

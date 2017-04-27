@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <header>
+    <header class="main-header">
       <div class="main-header-layout">
         <div class="logo">
           <img src="img/index/logo.png" width="154" height="64" alt="Логотип">
@@ -60,7 +60,7 @@
       </div>
 
     </header>
-    <main>
+    <main class="main-content">
       <div class="breadcrumbs-info-item">
         <section class="breadcrumbs">
           <ul class="breadcrumbs-list">
@@ -87,10 +87,10 @@
             <span class="filter-title">Сортировка:</span>
             <div class="form-sort-block">
               <select name="select" class="form-select">
-          <option>По популярности</option>
-          <option>Сначала недорогие</option>
-          <option>Сначала дорогие</option>
-            <option>По жирности</option>
+          <option>по популярности</option>
+          <option>сначала недорогие</option>
+          <option>сначала дорогие</option>
+            <option>по жирности</option>
         </select>
             </div>
           </div>
@@ -174,7 +174,9 @@
         </label>
             </div>
           </fieldset>
-          <button class="form-submit" type="submit">Применить</button>
+          <div class="button-block">
+            <button class="form-submit" type="submit">Применить</button>
+          </div>
         </div>
       </form>
       <section class="products">
