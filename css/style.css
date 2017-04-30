@@ -511,7 +511,6 @@ body {
 }
 
 .product {
-  top: -10px;
   position: relative;
   width: 23.2%;
   height: auto;
@@ -522,7 +521,7 @@ body {
 }
 
 .product:hover {
-  height: auto;
+  top: -10px;
   margin-left: 0;
   margin-right: 0;
   padding: 10px 1.15% 20px 1.15%;
@@ -531,6 +530,7 @@ body {
   border-radius: 5px;
   margin-bottom: -10px;
   z-index: 55;
+  margin-bottom: -34px;
 }
 
 .product:nth-child(4n) {
@@ -541,15 +541,28 @@ body {
   margin-left: 0;
 }
 
-.product-title {
-  text-align: center;
-  margin-top: 10px;
+.product:nth-child(4n):hover {
+  margin-right: 1.15%;
+  margin-right: -1.15%;
 }
 
-.product-link {
+.product:nth-child(4n+1):hover {
+  margin-left: 1.15%;
+  margin-left: -1.15%;
+}
+
+.product-title {
+  text-align: center;
+  margin-top: 3px;
   color: #fff;
   font-size: 16px;
   line-height: 22px;
+  text-decoration: underline;
+}
+
+.product-link {
+  position: relative;
+  display: block;
 }
 
 .product-thumb {
@@ -580,9 +593,12 @@ body {
 
 .product-price {
   position: absolute;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
   font-size: 45px;
   font-weight: bold;
-  bottom: 35%;
+  bottom: 26%;
   left: 0px;
 }
 
@@ -611,14 +627,6 @@ body {
   color: #fff;
 }
 
-.pagination-item-active {
-  vertical-align: middle;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-
 .arrow-direction-btn:hover {
   opacity: 0.2;
 }
@@ -627,17 +635,19 @@ body {
   opacity: 1;
 }
 
-.pagination-item-active a {
+.pagination-item-active {
+  background-color: #fff;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50%;
   color: #000;
   vertical-align: sub;
 }
 
-.pagination-link:hover {
+.pagination-link:not(.pagination-item-active):hover {
   padding: 5px 10px 5px 10px;
   border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.2;
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 
