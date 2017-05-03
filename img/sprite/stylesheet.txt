@@ -41,15 +41,15 @@
 }
 
 .sprite-______ {
-    width: 49px;
+    width: 48px;
     height: 49px;
     background-position: -192px -2px;
 }
 
 .sprite-______ {
-    width: 48px;
+    width: 49px;
     height: 49px;
-    background-position: -245px -2px;
+    background-position: -244px -2px;
 }
 
 .sprite-______ {
@@ -118,8 +118,14 @@
     background-position: -579px -2px;
 }
 
+.sprite-checkbox-onon {
+    width: 12px;
+    height: 10px;
+    background-position: -603px -2px;
+}
+
 .sprite-redbascet {
     width: 21px;
     height: 20px;
-    background-position: -603px -2px;
+    background-position: -619px -2px;
 }
