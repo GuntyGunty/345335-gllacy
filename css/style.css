@@ -441,6 +441,19 @@ body {
 
 .post-holder {}
 
+.contact-block {}
+
+.info-block span {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.adress {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
 
 /*catalog*/
 
