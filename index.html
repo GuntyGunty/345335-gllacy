@@ -61,7 +61,7 @@
           </ul>
         </div>
       </div>
-      <div class="info-block">
+      <div class="info-block info-block-index">
         <span class="info-block-text">С 10 до 20, ежедневно</span>
         <b class="info-block-tel">8 812 450-25-25</b>
       </div>
@@ -165,23 +165,25 @@
           <h3 class="blog-name">10 способов сервировки фруктовых щербетов к столу</h3>
         </div>
         <div class="banner post-block">
-          <div class="post-wrap">
+          <form class="post-wrap">
             <p class="post-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ерунды. Честно=)
             </p>
-            <label class="post-label" for="post-holder"></label>
-            <input type="text" class="post-holder" id="post-holder" placeholder="Электроннаѝ почта">
-            <button type="submit" class="post-button btn">Отправить</button>
-          </div>
+            <div class="form-wrap">
+              <label class="post-label" for="post-holder"></label>
+              <input type="text" class="post-holder" id="post-holder" placeholder="Электроннаѝ почта">
+              <button type="submit" class="post-button btn">Отправить</button>
+            </div>
+          </form>
         </div>
 
       </section>
       <section class="map">
         <div class="contact-block">
-          <div class="info-block">
-            <span>Адрес главного офиса и офлайн магазина: </span>
-            <b class="adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          <div class="contact-info">
+            <span>Адрес главного офиса и&nbsp;офлайн&nbsp;магазина: </span>
+            <p class="contact-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
             <span>Для заказов по телефону: </span>
-            <b class="tel">8 812 450-25-25</b>
+            <p class="contact-tel">8 812 450-25-25</p>
             <span> (c 10 до 20 ежедневно) </span>
           </div>
           <div class="contact-button">
@@ -190,6 +192,7 @@
                 </a>
           </div>
         </div>
+        <div id="yandex-map"></div>
       </section>
     </main>
     <footer class="main-footer">
@@ -219,5 +222,6 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe8945303b8fe5499afe4bd640936f0fe8dec213c671d5f5ee8be5b81a263ff6&amp;width=1200&amp;height=432&amp;id=yandex-map&amp;lang=ru_RU&amp;scroll=true"></script>
 </body>
 </html>

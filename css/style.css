@@ -107,6 +107,10 @@ body {
   border-radius: 30px;
 }
 
+.info-block-index {
+  float: right;
+}
+
 .submenu-list {
   display: none;
   position: absolute;
@@ -397,6 +401,7 @@ body {
 
 .blog-block {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .news-block {
@@ -419,17 +424,17 @@ body {
 
 .post-block {
   color: #000;
+  margin: 0;
   background: url("../img/index/post-pattern.jpg") no-repeat;
   padding: 0;
 }
 
 .post-wrap {
-  width: 80%;
+  width: 50%;
   height: auto;
-  flex-basis: 80%;
+  flex-basis: 50%;
   flex-shrink: 0;
   border-radius: 20px;
-  padding: 20px 20px 30px 30px;
   background: #f8f7f4;
   margin: 0;
 }
@@ -439,19 +444,69 @@ body {
   line-height: 22px;
 }
 
-.post-holder {}
+.post-button {
+  display: inline-block;
+  text-decoration: none;
+  float: right;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
 
-.contact-block {}
+.form-wrap {
+  display: flex;
+}
 
-.info-block span {
+.post-holder {
+  width: 368px;
+}
+
+.map {
+  background: url("../img/index/map.jpg") no-repeat;
+  position: relative;
+  width: 1200px;
+  height: 430px;
+}
+
+.contact-block {
+  position: absolute;
+  top: 60px;
+  left: 840px;
+  background: #fff;
+  color: #000;
+  z-index: 50;
+  padding: 30px 20px 35px 20px;
+  border-radius: 10px;
+}
+
+.contact-btn {
+  display: inline-block;
+  text-decoration: none;
+  float: right;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.contact-info span {
   font-size: 14px;
   line-height: 20px;
 }
 
-.adress {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
+.contact-adress {
+  margin: 0 0 25px 0;
+}
+
+.contact-tel {
+  margin: 0;
 }
 
 
@@ -842,17 +897,6 @@ body {
   margin-top: 10px;
 }
 
-.btn {
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #fff;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient( 180deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
-}
-
 .product-price {
   position: absolute;
   color: #fff;
@@ -931,6 +975,17 @@ body {
 
 .arrow-direction-btn:active {
   opacity: 1;
+}
+
+.btn {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient( 180deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .footer-links {
