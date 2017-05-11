@@ -5,9 +5,9 @@ body {
   line-height: 18px;
   color: #fff;
   font-weight: normal;
-  background-color: #9bafa4;
   font-family: "Roboto", "Arial", sans-serif;
   box-sizing: border-box;
+  width: 1200px;
 }
 
 *, *::before, *::after {
@@ -20,20 +20,126 @@ body {
 }*/
 
 .container {
-  max-width: 1200px;
+  width: 100%;
+  background-color: #9bafa4;
+  background-image: url("../img/index/slider1.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.slider-toggle {
+  display: none;
+}
+
+.slider-toggle-1:checked~.container {
+  background-color: #9bafa4;
+  background-image: url("../img/index/slider1.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.slider-toggle-2:checked~.container {
+  background-color: #8996a6;
+  background-image: url("../img/index/slider2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.slider-toggle-3:checked~.container {
+  background-color: #9d8b84;
+  background-image: url("../img/index/slider3.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.slide {
+  display: none;
+  min-height: 520px;
+  text-align: center;
+  padding-top: 270px;
+}
+
+.slider-toggle-1:checked~.container .slide-1, .slider-toggle-2:checked~.container .slide-2, .slider-toggle-3:checked~.container .slide-3 {
+  display: block;
+}
+
+.slider-name {
+  width: 60%;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
   margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.slide-3 .slider-name {
+  width: 56%;
+}
+
+.slider-btn {
+  display: inline-block;
+  padding: 12px 50px;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slider-btn:hover {
+  background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-btn:active {
+  background: linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  z-index: 20;
+  font-size: 0;
+}
+
+.controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .main-header {
   padding: 0 2.3% 0 2.3%;
+  margin: 0 auto;
 }
 
 .main-content {
   padding: 0 2.3% 0 2.3%;
+  margin: 0 auto;
 }
 
 .main-footer {
   padding: 0 2.3% 0 2.3%;
+  margin: 0 auto;
 }
 
 .main-header-layout {
@@ -51,7 +157,6 @@ body {
 
 .main-nav {
   width: 100%;
-  margin-right: 23.9%;
 }
 
 .menu-list {
@@ -264,7 +369,7 @@ body {
 /*index*/
 
 .wrapper {
-  margin-bottom: 265px;
+  position: relative;
 }
 
 .banner-block {
@@ -277,7 +382,7 @@ body {
 }
 
 .banner {
-  width: 55%;
+  width: 49%;
   height: auto;
   flex-basis: 49%;
   flex-shrink: 0;
@@ -422,26 +527,26 @@ body {
   margin: 0;
 }
 
-.post-block {
-  color: #000;
-  margin: 0;
-  background: url("../img/index/post-pattern.jpg") no-repeat;
-  padding: 0;
-}
-
 .post-wrap {
-  width: 50%;
-  height: auto;
-  flex-basis: 50%;
-  flex-shrink: 0;
+  height: 100%;
+  padding: 30px;
   border-radius: 20px;
   background: #f8f7f4;
   margin: 0;
 }
 
+.post-block {
+  color: #000;
+  margin: 0;
+  background: url("../img/index/post-pattern.jpg") no-repeat;
+  padding: 5px;
+}
+
 .post-text {
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .post-button {
@@ -456,15 +561,19 @@ body {
   display: flex;
 }
 
-.post-holder {
-  width: 368px;
+.input-text {
+  border: 1px solid #d3d3d2;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .map {
   background: url("../img/index/map.jpg") no-repeat;
   position: relative;
-  width: 1200px;
+  width: 100%;
   height: 430px;
+  margin-left: -2.3%;
 }
 
 .contact-block {
