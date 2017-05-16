@@ -62,7 +62,7 @@ body {
 }
 
 .slider-name {
-  width: 60%;
+  max-width: 670px;
   font-size: 60px;
   line-height: 60px;
   font-weight: bold;
@@ -70,13 +70,12 @@ body {
   margin-bottom: 30px;
 }
 
-.slide-3 .slider-name {
-  width: 56%;
+.slider-toggle-1:checked~.wrapper .slide-label[for="slide1"], .slider-toggle-2:checked~.wrapper .slide-label[for="slide2"], .slider-toggle-3:checked~.wrapper .slide-label[for="slide3"] .slider-name {
+  background-color: #fff;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 50px;
   font-weight: 600;
   font-size: 31px;
   line-height: 41px;
@@ -90,6 +89,10 @@ body {
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slider-btn {
+  padding: 12px 50px;
 }
 
 .btn:hover {
@@ -192,6 +195,7 @@ body {
 .menu-link-active {
   border-bottom: none;
   padding: 6px 15px;
+  background-color: #d07058;
 }
 
 .menu-list>.menu-item:hover>.submenu-list {
@@ -208,7 +212,6 @@ body {
 }
 
 .menu-iten-active .menu-link {
-  background: #d07058;
   color: #fff;
   border-radius: 30px;
 }
@@ -231,10 +234,12 @@ body {
 
 .submenu-item {
   list-style: none;
-  font-size: 14px;
-  line-height: 16px;
   text-align: left;
   padding: 8px 0px 8px 25px;
+}
+
+.submenu-item:hover {
+  background-color: #efb89c;
 }
 
 .submenu-item:nth-child(1) {
@@ -243,8 +248,31 @@ body {
 }
 
 .submenu-link {
+  font-size: 14px;
+  line-height: 16px;
   text-decoration: none;
   color: #000;
+  font-weight: normal;
+}
+
+.stady-price {
+  color: #a6a6a5;
+}
+
+.submenu-title {
+  font-weight: bold;
+  position: relative;
+}
+
+.submenu-title::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 128px;
+  background-color: #000;
+  opacity: 0.2;
+  left: -15px;
+  bottom: -13px;
 }
 
 .user-block-list {
@@ -287,7 +315,17 @@ body {
   width: 22px;
   height: 24px;
   background: transparent url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -98px -0px;
+  background-position: -72px 0px;
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.search-button:hover::before {
+  background-color: rgba(255, 255, 255, 1);
+  background: transparent url("../img/sprite/spritesheet.png") no-repeat;
+  background-position: -642px 0px;
 }
 
 .search-form {
@@ -330,7 +368,17 @@ body {
   width: 22px;
   height: 24px;
   background: transparent url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -74px -2px;
+  background-position: -95px -2px;
+}
+
+.user-item-login:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+}
+
+.user-item-login:hover::before {
+  background: transparent url("../img/sprite/spritesheet.png") no-repeat;
+  background-position: -619px -2px;
 }
 
 .login-form {
@@ -376,6 +424,7 @@ body {
   text-decoration: none;
   background: #fff;
   color: #000;
+  margin-bottom: 5px;
 }
 
 .user-item-bascet::before {
@@ -387,7 +436,7 @@ body {
   width: 22px;
   height: 24px;
   background: #fff url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -619px -2px;
+  background-position: -665px -2px;
 }
 
 .empty-bascet {
@@ -397,7 +446,7 @@ body {
 
 .empty-bascet::before {
   background: transparent url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -329px -2px;
+  background-position: -316px -2px;
 }
 
 .user-block-list>.user-item:hover>.login-form {
@@ -414,9 +463,13 @@ body {
   color: #000;
   font-size: 13px;
   line-height: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  padding-bottom: 17px;
 }
 
 .bascet-product-name {
+  min-width: 220px;
   text-align: left;
 }
 
@@ -425,9 +478,7 @@ body {
 }
 
 .delete-btn {
-  position: absolute;
-  top: 29px;
-  right: 504px;
+  position: relative;
   width: 10px;
   height: 10px;
   font-size: 0;
@@ -436,13 +487,13 @@ body {
   cursor: pointer;
   display: block;
   font-size: 0;
+  padding: 0;
 }
 
 .delete-btn::before, .delete-btn::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 2px;
+  left: 1px;
   width: 10px;
   height: 1px;
   background-color: #000;
@@ -492,15 +543,48 @@ body {
 
 .contact-form-close:nth-child(2) {}
 
-.total-price, .total-price-btn {}
+.total-price {
+  position: relative;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.total-price::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 512px;
+  background-color: #cacac7;
+  bottom: 115px;
+}
 
 .bascet-table {
-  width: 540px;
+  max-width: 540px;
   border: 1px;
+  padding: 10px;
+}
+
+.bascet-btn {
+  padding: 10px 20px;
+  float: right;
 }
 
 .bascet-table td {
   padding: 5px;
+}
+
+.total-price td {
+  padding-top: 30px;
+}
+
+.price-colculator {
+  min-width: 120px;
+}
+
+.final-price {
+  min-width: 70px;
 }
 
 .bascet-product-img {
@@ -645,7 +729,7 @@ body {
   width: 48px;
   height: 49px;
   background: transparent url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -244px -2px;
+  background-position: -264px -2px;
 }
 
 .right-seo .seo-text:nth-child(1)::after {
@@ -656,7 +740,7 @@ body {
   width: 48px;
   height: 49px;
   background: transparent url("../img/sprite/spritesheet.png") no-repeat;
-  background-position: -192px -2px;
+  background-position: -175px -2px;
 }
 
 .right-seo .seo-text:nth-child(2)::after {
@@ -862,6 +946,16 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
   color: #fff;
+}
+
+.breadcrumbs-link:hover {
+  color: #efb89c;
+  border-bottom: 1px solid #efb89c;
+}
+
+.breadcrumbs-link:active {
+  color: #efb89c;
+  border-bottom: 1px solid #efb89c;
 }
 
 .breadcrumbs-link-active {
@@ -1163,9 +1257,12 @@ body {
   background-color: rgba(248, 247, 244, 0.3);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  margin-bottom: -10px;
   z-index: 55;
-  margin-bottom: -34px;
+  margin-bottom: -48px;
+}
+
+.index-product:hover {
+  margin-bottom: -57px;
 }
 
 .product:nth-child(4n) {
@@ -1196,10 +1293,21 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.product-title:hover {
+  color: #efb89c;
+  border-bottom: 1px solid #efb89c;
+}
+
+.product-title:active {
+  color: #efb89c;
+  border-bottom: 1px solid #efb89c;
+}
+
 .product-link {
   position: relative;
   display: block;
   text-decoration: none;
+  text-align: center;
 }
 
 .product-thumb {
